@@ -1,51 +1,14 @@
-const textElements = {
-    userAgent: document.getElementById('userAgent'),
-    platform: document.getElementById('platform'),
-    appVersion: document.getElementById('appVersion'),
-    vendor: document.getElementById('vendor'),
-    product: document.getElementById('product'),
+const express = require('express');
+const app = express();
+const path = require('path');
 
-    language: document.getElementById('language'),
-    languages: document.getElementById('languages'),
-    timeZone: document.getElementById('timeZone'),
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'app')));
 
-    hardwareConcurrency: document.getElementById('hardwareConcurrency'),
-    deviceMemory: document.getElementById('deviceMemory'),
-    uadPlatform: document.getElementById('useragentdata?platform'),
-    uadBrands: document.getElementById('useragentdata?brands'),
-    uadMobile: document.getElementById('useragentdata?mobile'),
-
-    screenWidth: document.getElementById('screenWidth'),
-    screenHeight: document.getElementById('screenHeight'),
-    availWidth: document.getElementById('availWidth'),
-    availHeight: document.getElementById('availHeight'),
-    colorDepth: document.getElementById('colorDepth'),
-    pixelDepth: document.getElementById('pixelDepth'),
-    monitorOrientation: document.getElementById('orientation'),
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    textElements.userAgent.textContent = "ur browser: " + (navigator.userAgent || "idk");
-    textElements.platform.textContent = "wat platform r u on: " + (navigator.platform || "idk");
-    textElements.appVersion.textContent = "ap verszion: " + (navigator.appVersion || "idk");
-    textElements.vendor.textContent = "vendoor: " + (navigator.vendor || "idk");
-    textElements.product.textContent = "product: " + (navigator.product || "idk");
-
-    textElements.language.textContent = "goo goo ga ga: " + (navigator.language || "idk");
-    textElements.languages.textContent = "goo goo ga ga(s): " + (navigator.languages || "idk");
-    textElements.timeZone.textContent = "time lines: " + (Intl.DateTimeFormat().resolvedOptions().timeZone || "idk");
-
-    textElements.hardwareConcurrency.textContent = "fried cpu cores: " + (navigator.hardwareConcurrency || "idk");
-    textElements.deviceMemory.textContent = "goldfish memory: " + (navigator.deviceMemory || "idk");
-    textElements.uadPlatform.textContent = "windows, mac or linux: " + (navigator.userAgentData?.platform || "idk");
-    textElements.uadBrands.textContent = "greedy company: " + (toString(navigator.userAgentData?.brands) || "idk");
-    textElements.uadMobile.textContent = "phoner? " + (toString(navigator.userAgentData?.mobile) || "idk");
-
-    textElements.screenWidth.textContent = "wiiiide amount: " + (screen.width || "idk");
-    textElements.screenHeight.textContent = "tol amount: " + (screen.height || "idk");
-    textElements.availWidth.textContent = "actual widddddde: " + (screen.availWidth || "idk");
-    textElements.availHeight.textContent = "actual tol: " + (screen.availHeight || "idk");
-    textElements.colorDepth.textContent = "mor vibrant colrs (or somthin): " + (screen.colorDepth || "idk");
-    textElements.pixelDepth.textContent = "mor vibrant colrs (but different): " + (screen.pixelDepth || "idk");
-    textElements.monitorOrientation.textContent = "screen twister: " + (screen.orientation?.type || "idk");
-});
+const PORT = 0; // so nothing conflicts :D
+const server = app.listen(PORT, () => {
+    const REALPORT = server.address().port; // so that it displays correctly; if you remove this thinking it's useless i will bomb you (/j)
+    console.log(`thanks for locally hosting "gotursys"!`); // thanks <3
+    console.log(`feel free to star this repository. when i mean feel free, i actually mean i'm forcing you to.\n`); // it's true!
+    console.log(`the website is now running on http://localhost:${REALPORT}, congratulations!`) // <- yes
+})

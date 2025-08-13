@@ -1,0 +1,24 @@
+{
+  "name": "gotursys",
+  "version": "1.0.0",
+  "description": "got your system! nevermind it's just information displayed with javascript, still cool tho!",
+  "homepage": "https://github.com/SabioOfficial/GotUrSys#readme",
+  "bugs": {
+    "url": "https://github.com/SabioOfficial/GotUrSys/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SabioOfficial/GotUrSys.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "Sabio Tang",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  }
+}
