@@ -1,0 +1,46 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: lime;
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: yellow;
+    font-size: 48px;
+    text-shadow: 2px 2px red;
+    border: 5px dashed lime;
+    padding: 10px;
+    background-color: blue;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: cyan;
+    font-size: 30px;
+    border-bottom: 3px dotted magenta;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    background: rgba(0, 0, 255, 0.2);
+    padding: 5px;
+    border: 1px solid lime;
+    margin: 5px 0;
+}
+
+marquee {
+    font-size: 24px;
+    color: hotpink;
+    margin: 20px 0;
+}
+
+img {
+    width: 80px;
+    height: auto;
+    margin-top: 10px;
+}
